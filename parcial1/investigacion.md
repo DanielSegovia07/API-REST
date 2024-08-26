@@ -13,6 +13,7 @@
 <p>Las habilidades blandas, también conocidas como soft skills, son un conjunto de capacidades y características personales que no están relacionadas directamente con el conocimiento técnico o especializado, sino que se centran en cómo interactuamos y nos comunicamos con los demás. Estas habilidades son esenciales para el éxito en el ámbito laboral y en la vida personal, ya que influyen en la forma en que manejamos nuestras relaciones y nos enfrentamos a diversas situaciones.</p>
 
 <h2>Habilidades blandas necesarias para un ingeniero en sistemas computacionales</h2>
+
 <strong> Comunicación Efectiva</strong>
 <ol>
 <li>Comunicación Verbal y Escrita: Expresar ideas y soluciones de manera clara y concisa, tanto en presentaciones como en informes técnicos y correos electrónicos.</li>
