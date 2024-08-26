@@ -17,11 +17,24 @@
 <strong> Comunicación Efectiva</strong>
 <li>Comunicación Verbal y Escrita: Expresar ideas y soluciones de manera clara y concisa, tanto en presentaciones como en informes técnicos y correos electrónicos.</li>
 <li>Escucha Activa: Entender las necesidades y preocupaciones de los clientes, colegas y usuarios para proporcionar soluciones adecuadas.</li>
-<strong> </strong>
-<li></li>
-<li></li>
-
+</ol>
 <strong>Trabajo en Equipo</strong>
+<ol>
 <li>Colaboración: Trabajar eficientemente con otros miembros del equipo, compartir conocimientos y apoyar a los compañeros para alcanzar objetivos comunes.</li>
 <li>Resolución de Conflictos: Manejar desacuerdos y diferencias de opinión de manera constructiva y profesional.</li>
+</ol>
+<ol>
+<strong>Adaptabilidad</strong>
+<li>Flexibilidad: Ajustarse a cambios en los requisitos del proyecto, nuevas tecnologías y metodologías de trabajo</li>
+<li>Aprendizaje Continuo: Estar dispuesto a aprender nuevas herramientas, lenguajes de programación y enfoques para mantenerse actualizado en el campo.</li>
+</ol>
+<ol>
+<strong>Liderazgo y Gestión</strong>
+<li>Motivación: Inspirar y guiar a otros en proyectos y equipos, fomentando un ambiente de trabajo productivo y positivo.</li>
+<li>Toma de Decisiones: Evaluar opciones y tomar decisiones informadas y responsables bajo presión.</li>
+</ol>
+<ol>
+<strong>Gestión de Proyectos</strong>
+<li>Coordinación: Organizar y coordinar actividades y recursos para llevar a cabo proyectos dentro del alcance, tiempo y presupuesto establecidos.</li>
+<li>Monitoreo y Evaluación: Rastrear el progreso del proyecto y ajustar planes según sea necesario para cumplir con los objetivos.</li>
 </ol>
