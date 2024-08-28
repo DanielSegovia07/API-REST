@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form, button {
+            margin-bottom: 20px;
+        }
+
+        #digimonForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #digimonForm label, #digimonForm input, #digimonForm button {
+            margin: 10px 0;
+        }
+
+        #digimonForm input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        #digimonForm button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #digimonForm button:hover {
+            background-color: #0056b3;
+        }
+
+        #chuck {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #chuck img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #chuck p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <form id="digimonForm">
+        <label for="digimonName">Nombre del Digimon:</label>
+        <input type="text" id="digimonName" name="digimonName" required>
+        <button type="submit">Mostrar Imagen</button>
+    </form>
+
+    
+    <div id="chuck"></div>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("digimonForm").addEventListener("submit", (event) => {
+                event.preventDefault();
+                const digimonName = document.getElementById("digimonName").value;
+                fetch(`https://digi-api.com/api/v1/digimon/${digimonName}`)
+                    .then(objRespuesta => objRespuesta.json())
+                    .then(datoJson => {
+                        const imagesArray = datoJson.images;
+                        const level = datoJson.levels[0].level; // Acceder al nivel del Digimon
+                        const container = document.getElementById("chuck");
+                        container.innerHTML = ""; // Limpiar contenido previo
+                        const levelElement = document.createElement("p");
+                        levelElement.innerText = `Level: ${level}`;
+                        container.appendChild(levelElement);
+                        imagesArray.forEach(image => {
+                            const imgElement = document.createElement("img");
+                            imgElement.src = image.href;
+                            imgElement.alt = "Digimon Image";
+                            container.appendChild(imgElement);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data:', error);
+                        document.getElementById("chuck").innerText = "Error al cargar las imágenes.";
+                    });
+            });
+
+          
+        }
+    </script>
+</body>
+
+</html>
