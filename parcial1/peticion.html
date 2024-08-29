@@ -75,9 +75,6 @@
             font-weight: bold;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -87,7 +84,6 @@
         <button type="submit">Mostrar Imagen</button>
     </form>
 
-    
     <div id="digimon"></div>
 
     <script>
@@ -99,28 +95,43 @@
                     .then(objRespuesta => objRespuesta.json())
                     .then(datoJson => {
                         const imagesArray = datoJson.images;
-                        const level = datoJson.levels[0].level; 
+                        const level = datoJson.levels[0].level;
+                        const id = datoJson.id; // Obtiene el nombre del Digimon
+                        const name = datoJson.name; // Obtiene el nombre del Digimon
                         const container = document.getElementById("digimon");
-                        container.innerHTML = ""; 
+                        container.innerHTML = "";
+
+                        // Muestra el nombre del Digimon
+                        const idelement = document.createElement("p");
+                        idelement.innerText = `ID: ${id}`;
+                        container.appendChild(idelement);
+
+                        // Muestra el nombre del Digimon
+                        const nameElement = document.createElement("p");
+                        nameElement.innerText = `Name: ${name}`;
+                        container.appendChild(nameElement);
+
+                        // Muestra el nivel del Digimon
                         const levelElement = document.createElement("p");
                         levelElement.innerText = `Level: ${level}`;
                         container.appendChild(levelElement);
-                        imagesArray.forEach(image => {
+
+                        // Muestra las imágenes del Digimon
+                        imagesArray.map(image => {
                             const imgElement = document.createElement("img");
                             imgElement.src = image.href;
                             imgElement.alt = "Digimon Image";
-                            container.appendChild(imgElement);
-                        });
+                            return imgElement;
+                        }).forEach(imgElement => container.appendChild(imgElement));
                     })
                     .catch(error => {
                         console.error('Error fetching data:', error);
-                        document.getElementById("digimon").innerText = "Digimon no encontrado.";
+                        document.getElementById("digimon").innerText = "Error al cargar las imágenes.";
                     });
             });
-
-          
         }
     </script>
 </body>
 
 </html>
+
