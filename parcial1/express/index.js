@@ -1,6 +1,9 @@
 // SERVIDOR
 const express = require('express');
+const cors = require('cors')
 const app = express();
+
+app.use(cors());
 
 // FUNCIONES DEL SERVIDOR
 app.get('/', (req, res) => {
