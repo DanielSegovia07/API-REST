@@ -1,7 +1,7 @@
 <h2>Habilidades blandas</h2>
 <p>Las habilidades blandas hacen referencia a las habilidades no-cognitivas que nos permiten el conocimiento y relación con los demás y con uno mismo, la resolución eficiente y creativa de problemas, reconocer y manejarse a nivel emocional, plantearse objetivos y planificarse para conseguirlos, etc.
 Se trata de habilidades que con respecto a las habilidades cognitivas que se centran en la experiencia y adquisición de contenidos, son transversales, es decir, se dan en todos los contextos de la vida y suponen, a grandes rasgos, el modo en que las personas nos relacionamos con nuestro entorno.</p>
-<p>En mi experiencia, las habilidades blandas, también conocidas como soft skills, son cruciales tanto en el ámbito laboral como en la vida personal. Estas habilidades no se relacionan directamente con conocimientos técnicos específicos, sino con la manera en que interactuamos y nos comunicamos con los demás. Creo que son esenciales para tener éxito, ya que influyen en cómo manejamos nuestras relaciones y enfrentamos diferentes situaciones.</p>
+<p>En mi experiencia, las habilidades blandas, son cruciales tanto en el ámbito laboral como en la vida personal. Estas habilidades no se relacionan directamente con conocimientos técnicos específicos, sino con la manera en que interactuamos y nos comunicamos con los demás. Creo que son esenciales para tener éxito, ya que influyen en cómo manejamos nuestras relaciones y enfrentamos diferentes situaciones.</p>
 
 <h2>Habilidades blandas necesarias para un ingeniero en sistemas computacionales</h2>
 
