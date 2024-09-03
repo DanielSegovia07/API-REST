@@ -7,11 +7,11 @@ const app = express();
 
 // FUNCIONES DEL SERVIDOR
 app.get('/', (req, res) => {
-    res.send('Server express contestando a peticion get');
+    res.json({mensaje:'Server express contestando a peticion get'});
 });
 
 app.post('/', (req, res) => {
-    res.send('Server express contestando a peticion post');
+    res.json({mensaje:'Server express contestando a peticion post'});
 });
 
 app.listen(3000,(req,res)=>{

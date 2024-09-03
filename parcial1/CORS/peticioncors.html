@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column; /* Cambiado a columna */
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -20,6 +21,7 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* Añadir margen inferior */
         }
         button {
             background-color: #007bff;
@@ -33,12 +35,23 @@
         button:hover {
             background-color: #0056b3;
         }
+        iframe {
+            margin-top: 20px; 
+            width: 25%;
+            height: 100px; 
+            border: 1px solid #ccc; /* Opcional: borde para mejor visualización */
+        }
     </style>
 </head>
 <body>
     <form>
         <button type="button" id="btn_peticion">Petición</button>
     </form>
+    <form target="resultado" method="get" action="http://localhost:3000">
+        <button type="submit" id="btn_peticion">Petición formulario</button>
+    </form>
+    <br> 
+    <iframe name="resultado"></iframe>
     <script>
         document.getElementById("btn_peticion").addEventListener("click", async () => {
             try {
