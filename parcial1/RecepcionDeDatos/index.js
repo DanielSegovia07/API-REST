@@ -4,22 +4,23 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors());    //Middleware de terceros que tu instalas que ya hizo alguien mas
-app.use((req,res,next) => { //Middleware de Aplicacion
-    console.log(new Date());
-    next();
-})
-
-
 app.use(express.json()); //Middleware incorporado, funciones que ya vienen en el express
 
 // FUNCIONES DEL SERVIDOR
-app.get('/', (req, res) => {
+app.get('/clientes/:id', (req, res) => {
+    console.log(req.params);
     res.json({mensaje:'Server express contestando a peticion get'})
-    next(error);
+    
 });
 
-app.post('/', (req, res) => {
+app.post('/clientes', (req, res) => {
+    console.log(req.query)
     res.json({mensaje:'Server express contestando a peticion post'});
+});
+
+app.put('/clientes', (req, res) => {
+    console.log(req.body)
+    res.json({mensaje:'Server express contestando a peticion post put'});
 });
 
 app.listen(3000,(req,res)=>{
