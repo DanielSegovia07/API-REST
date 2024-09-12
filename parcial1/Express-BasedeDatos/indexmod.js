@@ -59,17 +59,17 @@ app.get('/personas', (req, res) => {
 
 // Alta de una nueva persona
 app.post('/personas', (req, res) => {
-    const { NOMBRE, APELLIDO } = req.body; 
-    if (!NOMBRE || !APELLIDO) {
+    const { ID_PERSONA, NOMBRE, APELLIDO, EDAD, PAIS } = req.body; 
+    if (!NOMBRE || !APELLIDO || !ID_PERSONA || !EDAD || !PAIS) {
         return res.status(400).json({
             status: 0,
-            mensaje: "Datos incompletos, se requiere NOMBRE y APELLIDO"
+            mensaje: "Datos incompletos, se requiere ID_PERSONA, NOMBRE, APELLIDO, EDAD y PAIS"
         });
     }
 
-    const consulta = `INSERT INTO personas (NOMBRE, APELLIDO) VALUES (?, ?)`;
+    const consulta = `INSERT INTO personas (ID_PERSONA, NOMBRE, APELLIDO, EDAD, PAIS) VALUES (?, ?, ?, ?, ?)`;
 
-    connection.query(consulta, [NOMBRE, APELLIDO], (err, results) => {
+    connection.query(consulta, [ID_PERSONA, NOMBRE, APELLIDO, EDAD, PAIS], (err, results) => {
         if (err) {
             res.status(500).json({
                 status: 0,
@@ -82,12 +82,13 @@ app.post('/personas', (req, res) => {
         res.json({
             status: 1,
             mensaje: "Persona agregada exitosamente",
-            datos: { ID_PERSONA: results.insertId, NOMBRE, APELLIDO }
+            datos: { ID_PERSONA, NOMBRE, APELLIDO, EDAD, PAIS }
         });
     });
 });
 
-// Eliminar una persona por ID
+
+// Eliminar una persona 
 app.delete('/personas', (req, res) => {
     const { ID_PERSONA } = req.query; 
 
