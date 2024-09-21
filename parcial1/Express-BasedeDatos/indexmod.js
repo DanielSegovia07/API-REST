@@ -11,6 +11,7 @@ app.use(express.text());
 const connection = mysql2.createConnection({
     host: 'localhost',
     user: 'root',
+    password: 'agos0708',
     database: 'prueba2'
 });
 
