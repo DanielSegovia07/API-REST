@@ -3,10 +3,10 @@ const express = require('express');
 const basicAuth = require('express-basic-auth');
 const app = express();
 
-// Configurar autenticación básica con express-basic-auth
+
 app.use(basicAuth({
     users: { 'admin': 'password123' },  // Usuario y contraseña válidos
-    challenge: true,  // Esto asegura que el cliente vea el prompt de autenticación
+    challenge: true,  
     unauthorizedResponse: (req) => 'Credenciales incorrectas'  // Respuesta en caso de error
 }));
 
