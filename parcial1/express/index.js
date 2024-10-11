@@ -1,27 +1,27 @@
 // SERVIDOR
 const express = require('express');
-const cors = require('cors')
+const basicAuth = require('express-basic-auth');
 const app = express();
 
-app.use(cors());
+
+app.use(basicAuth({
+    users: { 'admin': 'password123' },  // Usuario y contraseña válidos
+    challenge: true,  
+    unauthorizedResponse: (req) => 'Credenciales incorrectas'  // Respuesta en caso de error
+}));
 
 // FUNCIONES DEL SERVIDOR
 app.get('/', (req, res) => {
-    if(tru) {
-        res.json({mensaje:'Server express contestando a peticion get'});
-    }
-    else {
-        res.json({mensaje:'Server express contestando a peticion post'})
-        
-        next(err);}
+    res.json({ mensaje: 'Server express contestando a petición GET' });
 });
 
-app.use((err,req,res,next)=>{
-    console.log(err);
-    res.status(501);
-    res.json({error:err.message})
+app.post('/', (req, res) => {
+    res.json({ mensaje: 'Server express contestando a petición POST' });
 });
 
-app.listen(3000,()=>{
-    console.log("Servidor express corriendo en  puerto 3000")
+// Iniciar el servidor
+app.listen(3000, () => {
+    console.log("Servidor express corriendo en puerto 3000");
 });
+
+

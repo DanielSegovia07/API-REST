@@ -1,0 +1,27 @@
+{
+    "templates": {
+      "default": {
+        "staticFiles": {
+          "include": [
+              "./documentacion/static"
+          ]
+        }
+      }
+    },
+    "source": {
+    "include": [ ],
+    "exclude": [ ],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+ "template": "node_modules/clean-jsdoc-theme", 
+ "encoding": "utf8", 
+ "destination": "./out/", 
+ "recurse": true, 
+ "tutorials": "path/to/tutorials"
+}
+    
+  }
+
+  

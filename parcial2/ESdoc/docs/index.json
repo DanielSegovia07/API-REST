@@ -1,0 +1,73 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "ESdoc/Documentacion.js",
+    "content": "/**\r\n * Calcula el área de un triángulo\r\n * \r\n * @param {number} b Base del triángulo\r\n * @param {number} a Altura del triángulo\r\n * @returns {number} Área del triángulo\r\n */\r\nexport function areaTriangulo(b, a) {\r\n    return (b * a) / 2;\r\n}\r\n\r\n",
+    "static": true,
+    "longname": "C:/Users/danie/OneDrive/Desktop/API-REST/parcial2/ESdoc/Documentacion.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "function",
+    "name": "areaTriangulo",
+    "memberof": "ESdoc/Documentacion.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "ESdoc/Documentacion.js~areaTriangulo",
+    "access": "public",
+    "export": true,
+    "importPath": "esdoc/ESdoc/Documentacion.js",
+    "importStyle": "{areaTriangulo}",
+    "description": "Calcula el área de un triángulo",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{number} Área del triángulo"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "b",
+        "description": "Base del triángulo"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "a",
+        "description": "Altura del triángulo"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": "Área del triángulo"
+    }
+  },
+  {
+    "kind": "index",
+    "content": "",
+    "longname": "C:\\Users\\danie\\OneDrive\\Desktop\\API-REST\\parcial2\\ESdoc\\README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  }
+]
